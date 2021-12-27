@@ -5,7 +5,6 @@ from .KeyMap import KeyMap
 
 class KeyMaps(KeyMapsABC):
     def __init__(self):
-        # Added new comment
         self._data = {}
         self._active_keymap = None
 
