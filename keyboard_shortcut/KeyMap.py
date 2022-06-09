@@ -1,4 +1,5 @@
 from typing import Callable
+from typing import Tuple
 
 from interface_keymaps import KeyMapABC
 
@@ -8,8 +9,8 @@ class KeyMap(KeyMapABC):
     def __init__(self):
         self._data = {}
 
-    def add_new_keyboard_shortcut(self, key_combo: tuple, command: Callable):
-        self._data[key_combo] = command
+    def add_new_keyboard_shortcut(self, key_combo: tuple, command_and_feed_back: Tuple[Callable, str]):
+        self._data[key_combo] = command_and_feed_back
 
     def get_command_and_feedback(self, key_combo: tuple) -> tuple:
         try:
