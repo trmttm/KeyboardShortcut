@@ -22,3 +22,6 @@ class KeyMap(KeyMapABC):
     @property
     def keys(self) -> tuple:
         return tuple(self._data.keys())
+
+    def clear(self):
+        self.__init__()
